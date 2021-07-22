@@ -11,4 +11,5 @@ class Team(models.Model):
     linkedIn_link = models.URLField(max_length=100)
     created_date = models.DateTimeField(auto_now_add=True)
 
+    objects = models.Manager()
 

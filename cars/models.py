@@ -6,16 +6,25 @@ from multiselectfield import MultiSelectField
 
 # Create your models here.
 class Car(models.Model):
-    cityChoices = (('KLA', 'Kampala'), ('EBB', 'Entebbe'), ('MSK', 'Masaka'), ('MBR', 'Mbarara'), ('GLU', 'Gulu'),
-                   ('MBL', 'Mbale'), ('JNJ', 'Jinja'), ('SRT', 'Soroti'))
+    cityChoices = (('Kampala', 'Kampala'), ('Entebbe', 'Entebbe'), ('Masaka', 'Masaka'), ('Mbarara', 'Mbarara'),
+                   ('Gulu', 'Gulu'), ('Mbale', 'Mbale'), ('Jinja', 'Jinja'), ('Soroti', 'Soroti'))
 
-    features_choices = (('Cruise Control', 'Cruise Control'), ('Audio Interface', 'Audio Interface'),
-                        ('Airbags', 'Airbags'), ('Air Conditioning', 'Air Conditioning'), ('LED lights', 'LED lights'),
-                        ('Seat Heating', 'Seat Heating'), ('Alarm System', 'Alarm System'), ('BullBar', 'BullBar'),
-                        ('ParkAssist', 'ParkAssist'), ('Power Steering', 'Power Steering'),
-                        ('Reversing Camera', 'Reversing Camera'), ('Direct Fuel Injection', 'Direct Fuel Injection'),
-                        ('Auto Start/Stop', 'Auto Start/Stop'), ('Wind Deflector', 'Wind Deflector'),
-                        ('Bluetooth Handset', 'Bluetooth Handset'), ('Leather seats', 'Leather seats'),
+    features_choices = (('Cruise Control', 'Cruise Control'),
+                        ('Audio Interface', 'Audio Interface'),
+                        ('Airbags', 'Airbags'),
+                        ('Air Conditioning', 'Air Conditioning'),
+                        ('LED lights', 'LED lights'),
+                        ('Seat Heating', 'Seat Heating'),
+                        ('Alarm System', 'Alarm System'),
+                        ('BullBar', 'BullBar'),
+                        ('ParkAssist', 'ParkAssist'),
+                        ('Power Steering', 'Power Steering'),
+                        ('Reversing Camera', 'Reversing Camera'),
+                        ('Direct Fuel Injection', 'Direct Fuel Injection'),
+                        ('Auto Start/Stop', 'Auto Start/Stop'),
+                        ('Wind Deflector', 'Wind Deflector'),
+                        ('Bluetooth Handset', 'Bluetooth Handset'),
+                        ('Leather seats', 'Leather seats'),
                         ('Keyless entry', 'Keyless entry'), )
 
     bodyStyleChoices = (('Sedan', 'Sedan'), ('Coupe', 'Coupe'), ('Sports Car', 'Sports Car'),
@@ -52,7 +61,7 @@ class Car(models.Model):
     car_photo_1 = models.ImageField(upload_to='photos/%y/%m/%d/')
     car_photo_2 = models.ImageField(upload_to='photos/%y/%m/%d/')
     car_photo_3 = models.ImageField(upload_to='photos/%y/%m/%d/')
-    car_photo_4 = models.ImageField(upload_to='photos/%y/%m/%d/')
+    car_photo_4 = models.ImageField(upload_to='photos/%y/%m/%d/', blank=True)
     engine_capacity = models.CharField(max_length=100)
     VIN = models.CharField(max_length=100, blank=True)
     mileage = models.IntegerField()
@@ -60,8 +69,12 @@ class Car(models.Model):
     negotiable = models.BooleanField(default=False)
     description = RichTextField()
     is_featured = models.BooleanField(default=False)
+    for_rent = models.BooleanField(default=False)
     created_date = models.DateTimeField(default=datetime.now, blank=True)
+
+    objects = models.Manager()  # manager for the model
 
     def __str__(self):
         return self.car_name
+
 

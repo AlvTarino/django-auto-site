@@ -10,15 +10,14 @@ class CarAdmin(admin.ModelAdmin):
 
     thumbnail.short_description = 'Car Photo'
 
-    list_display = ('id', 'thumbnail', 'car_name', 'car_model', 'transmission', 'fuel_Type', 'year', 'condition', 'city',
-                    'engine_capacity', 'price', 'negotiable', 'is_featured')
-    list_display_links = ('id', 'thumbnail', 'car_name', 'car_model', 'transmission', 'fuel_Type', 'year', 'condition',
-                          'city', 'engine_capacity', 'price',)
-    list_editable = ('negotiable', 'is_featured')
+    list_display = ('id', 'thumbnail', 'car_name', 'car_model', 'transmission', 'fuel_Type', 'year',
+                    'condition', 'city', 'engine_capacity', 'price', 'negotiable', 'is_featured', 'for_rent')
+    list_display_links = ('id', 'thumbnail', 'car_name', 'car_model', 'year', 'condition', 'city', 'price',)
+    list_editable = ('negotiable', 'is_featured', 'for_rent')
     search_fields = ('id', 'car_name', 'car_model', 'transmission', 'fuel_Type', 'year', 'condition',
-                     'city', 'engine_capacity', 'price', 'negotiable', 'is_featured')
-    list_filter = ('id', 'car_name', 'car_model', 'transmission', 'fuel_Type', 'year', 'condition', 'city',
-                   'engine_capacity', 'price', 'negotiable', 'is_featured')
+                     'city', 'engine_capacity', 'price', 'negotiable', 'is_featured', 'for_rent')
+    list_filter = ('id', 'car_model', 'transmission', 'fuel_Type', 'year', 'condition', 'city',
+                   'engine_capacity', 'price', 'negotiable', 'is_featured', 'for_rent')
 
 
 admin.site.register(Car, CarAdmin)
