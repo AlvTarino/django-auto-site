@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'l_s&yzxfjhtn2ju7__m0d(uzp+0b18mk3ljl#pie2j^g*kc*qh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["morning-harbor-71262.herokuapp.com", "djangocars.com"]
+ALLOWED_HOSTS = ["morning-harbor-71262.herokuapp.com"]
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
