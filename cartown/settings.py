@@ -27,7 +27,7 @@ SECRET_KEY = 'l_s&yzxfjhtn2ju7__m0d(uzp+0b18mk3ljl#pie2j^g*kc*qh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["morning-harbor-71262.herokuapp.com", "djangocars.com"]
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
