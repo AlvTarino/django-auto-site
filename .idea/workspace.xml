@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="19bbdf04-5a8c-43dc-a79f-e5e46dcee7d0" name="Default Changelist" comment="Customised Admin page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cartown/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cartown/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,10 +215,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1623665488698" />
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1629161575222">
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1629167402535">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1629161575222" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1629167402535" />
     <state x="491" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625074131125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
