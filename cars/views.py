@@ -6,7 +6,7 @@ from .models import Car
 # Create your views here.
 def cars(request):
     car = Car.objects.order_by('-created_date')
-    paginator = Paginator(car, 3)
+    paginator = Paginator(car, 6)
     page = request.GET.get('page')
     paged_cars = paginator.get_page(page)
     model_search = Car.objects.values_list('car_model', flat=True).distinct()  # to get more precise search results
